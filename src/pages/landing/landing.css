@@ -1,0 +1,180 @@
+.landing-page {
+    color: white;
+    background-color: black;
+}
+
+.landing-page>div {
+    border-bottom: 0.5rem solid rgba(128, 128, 128, 0.25);
+}
+
+.landing-page>.landing-feature:nth-of-type(2n+1)>.container {
+    flex-direction: row-reverse;
+}
+
+.landing-page>.banner {
+    height: 100dvh;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+
+.background::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, 50%);
+    box-shadow: inset 0 0 100px 50px rgb(0, 0, 0, 75%);
+}
+
+.background>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.landing-page-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    position: relative;
+    z-index: 999;
+}
+
+.landing-page-nav>.nav-logo {
+    width: 150px;
+}
+
+.landing-page-nav>.nav-logo>img {
+    width: 100%;
+}
+
+.landing-page-nav>.nav-action {
+    display: flex;
+}
+
+.landing-page-nav>.nav-action>button {
+    background: rgb(229, 9, 20);
+    color: white;
+    outline: none;
+    border: 0;
+    padding: 0.35rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-left: 1.25rem;
+}
+
+.nav-action select {
+    background: rgba(25, 25, 25, 0.75);
+    color: white;
+    padding: 0.35rem 2.5rem;
+    border-radius: 5px;
+    font-size: 1em;
+    appearance: none;
+    font-weight: 500;
+}
+
+.nav-action>div {
+    position: relative;
+}
+
+.nav-action>div>img,
+.nav-action>div>i {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.nav-action>div>img {
+    left: 0.75rem;
+}
+
+.nav-action>div>i {
+    right: 0.75rem;
+    font-size: .7em;
+}
+
+.card-text {
+    position: absolute;
+    text-align: center;
+    top: 65%;
+    transform: translate(0, -65%);
+}
+
+.card-text>h1 {
+    font-size: 3em;
+    margin: 10px 0;
+}
+
+.card-text>h3:nth-of-type(1) {
+    font-weight: normal;
+    font-size: 1.5em;
+}
+
+.card-text>h3:nth-of-type(2) {
+    font-weight: normal;
+    font-size: 1.3em;
+}
+
+.landing-email-input-field {
+    width: 25rem;
+    position: relative;
+}
+
+.landing-email-input-field input {
+    background-color: rgba(25, 25, 25, 0.75);
+    border: 1px solid rgba(128, 128, 128, 0.7);
+    border-radius: 5px;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    padding: 1.5rem 1rem 0.5rem;
+    width: calc(100% - 30px);
+}
+
+.landing-email-input-field input+label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translate(0, -50%);
+    color: rgb(255, 255, 255, 70%);
+    transition: .2s ease-in-out;
+}
+
+.landing-email-input-field input:focus+label,
+.landing-email-input-field input:valid+label {
+    top: 20%;
+    transform: translate(0, -20%);
+    font-size: 0.8em;
+}
+
+.get-started {
+    display: flex;
+    justify-content: center;
+}
+
+.get-started>button {
+    padding: 0 1.5rem;
+    border-radius: 5px;
+    background: rgb(229, 9, 20);
+    color: white;
+    border: 0;
+    outline: none;
+    margin-left: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.get-started>button>i {
+    font-size: 0.8em;
+    margin-left: 0.75rem;
+}

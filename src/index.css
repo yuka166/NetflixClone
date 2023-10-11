@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'Netflix Sans';
+  src: url(./assets/fonts/NetflixSans-Regular.otf);
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+  src: url(./assets/fonts/NetflixSans-Light.otf);
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+  src: url(./assets/fonts/NetflixSans-Medium.otf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+  src: url(./assets/fonts/NetflixSans-Bold.otf);
+  font-weight: bold;
+}
+
+:root {
+  font-family: Netflix Sans, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
