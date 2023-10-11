@@ -3,7 +3,12 @@
     background-color: black;
 }
 
-.landing-page>div {
+.landing-page h3 {
+    font-weight: 400;
+}
+
+.landing-page>.banner,
+.landing-page>.landing-feature {
     border-bottom: 0.5rem solid rgba(128, 128, 128, 0.25);
 }
 
@@ -105,6 +110,7 @@
     position: absolute;
     text-align: center;
     top: 65%;
+    width: calc(100% - 20rem);
     transform: translate(0, -65%);
 }
 
@@ -114,12 +120,10 @@
 }
 
 .card-text>h3:nth-of-type(1) {
-    font-weight: normal;
     font-size: 1.5em;
 }
 
 .card-text>h3:nth-of-type(2) {
-    font-weight: normal;
     font-size: 1.3em;
 }
 
@@ -129,7 +133,7 @@
 }
 
 .landing-email-input-field input {
-    background-color: rgba(25, 25, 25, 0.75);
+    background-color: rgba(15, 15, 15, 0.75);
     border: 1px solid rgba(128, 128, 128, 0.7);
     border-radius: 5px;
     outline: none;
@@ -167,7 +171,7 @@
     color: white;
     border: 0;
     outline: none;
-    margin-left: 10px;
+    margin-left: 0.75rem;
     font-size: 1.5em;
     font-weight: bold;
     display: flex;
@@ -177,4 +181,69 @@
 .get-started>button>i {
     font-size: 0.8em;
     margin-left: 0.75rem;
+}
+
+.landing-question {
+    padding: 4rem 0;
+}
+
+.landing-question>h2 {
+    margin: 0 auto 1.5rem;
+    width: fit-content;
+    font-size: 3em;
+}
+
+.landing-question>h3 {
+    margin: 2rem auto 1rem;
+    width: fit-content;
+    font-size: 1.25em;
+}
+
+.landing-question>.question-card {
+    margin-top: 0.5rem;
+}
+
+.landing-question>.question-card>.landing-question-title {
+    transition: background .25s cubic-bezier(0.9, 0, 0.51, 1);
+    margin: 0;
+}
+
+.landing-question>.question-card>.landing-question-title:hover {
+    background-color: rgb(65, 65, 65);
+}
+
+.landing-question>.question-card>div,
+.landing-question>.question-card .landing-question-title {
+    background-color: rgb(45, 45, 45);
+}
+
+.landing-question>.question-card>.landing-question-title>button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem;
+    background: transparent;
+    outline: none;
+    border: 0;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.landing-question>.question-card>div {
+    font-size: 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.2s cubic-bezier(0.5, 0, 0.1, 1);
+    padding: 0 1.5rem;
+    margin-top: 0.1rem;
+}
+
+.landing-question>.question-card>.question-open {
+    max-height: 75rem;
+    padding: 1.5rem;
+}
+
+.landing-question>.question-card>.landing-question-title>button>.x-icon {
+    transform: rotate(45deg);
 }
