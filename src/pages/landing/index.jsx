@@ -6,14 +6,15 @@ import logo from '../../assets/icons/logo.svg';
 import languageIcon from '../../assets/icons/language.svg';
 import plusIcon from '../../assets/icons/plus-icon.svg';
 import FeatureComponent from '../../components/landingComponents/feature';
-import { landingData } from '../../data/landing';
+import { landingData } from '../../data/landingData';
+import { footerData } from '../../data/footerData';
 import './landing.css';
 
 function LandingPage() {
 
     useEffect(() => {
         const questionButtons = document.querySelectorAll('.landing-question-title>button');
-        const questionHiddenTexts = document.querySelectorAll('.landing-question>.question-card>div');
+        const questionHiddenTexts = document.querySelectorAll('.landing-question .question-card>div');
         const questionIcons = document.querySelectorAll('.landing-question-title>button>i');
         questionButtons.forEach((btn, i) => {
             btn.addEventListener('click', () => {
@@ -37,9 +38,9 @@ function LandingPage() {
         <div className='landing-page'>
             <div className='banner'>
                 <div className='background'><img src={background} /></div>
-                <div className='landing-page-nav container'>
+                <header className='landing-page-nav container'>
                     <div className='nav-logo'><img src={logo} /></div>
-                    <header className='nav-action'>
+                    <div className='nav-action'>
                         <div>
                             <select>
                                 <option>English</option>
@@ -49,8 +50,8 @@ function LandingPage() {
                             <i><FontAwesomeIcon icon={faCaretDown} /></i>
                         </div>
                         <button>Sign In</button>
-                    </header>
-                </div>
+                    </div>
+                </header>
                 <div className='card-text container'>
                     <h1>Laughter. Tears. Thrills. Find it all on Netflix.</h1>
                     <h3>Join today. Cancel anytime.</h3>
@@ -72,75 +73,101 @@ function LandingPage() {
                         image={item.image} image2={item.image2} video={item.video} id={item.id} />
                 )
             })}
-            <div className='landing-question container'>
-                <h2>Frequently Asked Questions</h2>
-                <div className='question-card'>
-                    <h3 className='landing-question-title'>
-                        <button>
-                            <span>What is Netflix?</span>
-                            <i><img src={plusIcon} /></i>
-                        </button>
-                    </h3>
-                    <div>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.
-
-                        You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price. There's always something new to discover and new TV shows and movies are added every week!</div>
-                </div>
-                <div className='question-card'>
-                    <h3 className='landing-question-title'>
-                        <button>
-                            <span>How much does Netflix cost?</span>
-                            <i><img src={plusIcon} /></i>
-                        </button>
-                    </h3>
-                    <div>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from 70,000 ₫ to 260,000 ₫ a month. No extra costs, no contracts.</div>
-                </div>
-                <div className='question-card'>
-                    <h3 className='landing-question-title'>
-                        <button>
-                            <span>Where can i watch?</span>
-                            <i><img src={plusIcon} /></i>
-                        </button>
-                    </h3>
-                    <div>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.</div>
-                </div>
-                <div className='question-card'>
-                    <h3 className='landing-question-title'>
-                        <button>
-                            <span>How do i cancel?</span>
-                            <i><img src={plusIcon} /></i>
-                        </button>
-                    </h3>
-                    <div>Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</div>
-                </div>
-                <div className='question-card'>
-                    <h3 className='landing-question-title'>
-                        <button>
-                            <span>What can i watch on Netflix?</span>
-                            <i><img src={plusIcon} /></i>
-                        </button>
-                    </h3>
-                    <div>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.</div>
-                </div>
-                <div className='question-card'>
-                    <h3 className='landing-question-title'>
-                        <button>
-                            <span>Is Netflix good for kids?</span>
-                            <i><img src={plusIcon} /></i>
-                        </button>
-                    </h3>
-                    <div>The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and movies in their own space.</div>
-                </div>
-
-                <h3>Ready to watch? Enter your email to create or restart your membership.</h3>
-                <div className='get-started'>
-                    <div className='landing-email-input-field'>
-                        <input type='text' required />
-                        <label>Email address</label>
+            <div className='landing-question'>
+                <div className="container">
+                    <h2>Frequently Asked Questions</h2>
+                    <div className='question-card'>
+                        <h3 className='landing-question-title'>
+                            <button>
+                                <span>What is Netflix?</span>
+                                <i><img src={plusIcon} /></i>
+                            </button>
+                        </h3>
+                        <div>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.
+                            <br />
+                            You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price. There's always something new to discover and new TV shows and movies are added every week!</div>
                     </div>
-                    <button type='button'>Get Started <i><FontAwesomeIcon icon={faChevronRight} /></i>
-                    </button>
+                    <div className='question-card'>
+                        <h3 className='landing-question-title'>
+                            <button>
+                                <span>How much does Netflix cost?</span>
+                                <i><img src={plusIcon} /></i>
+                            </button>
+                        </h3>
+                        <div>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from 70,000 ₫ to 260,000 ₫ a month. No extra costs, no contracts.</div>
+                    </div>
+                    <div className='question-card'>
+                        <h3 className='landing-question-title'>
+                            <button>
+                                <span>Where can i watch?</span>
+                                <i><img src={plusIcon} /></i>
+                            </button>
+                        </h3>
+                        <div>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.</div>
+                    </div>
+                    <div className='question-card'>
+                        <h3 className='landing-question-title'>
+                            <button>
+                                <span>How do i cancel?</span>
+                                <i><img src={plusIcon} /></i>
+                            </button>
+                        </h3>
+                        <div>Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</div>
+                    </div>
+                    <div className='question-card'>
+                        <h3 className='landing-question-title'>
+                            <button>
+                                <span>What can i watch on Netflix?</span>
+                                <i><img src={plusIcon} /></i>
+                            </button>
+                        </h3>
+                        <div>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.</div>
+                    </div>
+                    <div className='question-card'>
+                        <h3 className='landing-question-title'>
+                            <button>
+                                <span>Is Netflix good for kids?</span>
+                                <i><img src={plusIcon} /></i>
+                            </button>
+                        </h3>
+                        <div>The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and movies in their own space.</div>
+                    </div>
+                    <h3>Ready to watch? Enter your email to create or restart your membership.</h3>
+                    <div className='get-started'>
+                        <div className='landing-email-input-field'>
+                            <input type='text' required />
+                            <label>Email address</label>
+                        </div>
+                        <button type='button'>Get Started <i><FontAwesomeIcon icon={faChevronRight} /></i>
+                        </button>
+                    </div>
                 </div>
             </div>
+            <footer className='container'>
+                <h3><a href='#'>Question? Contact us.</a></h3>
+                <ul>
+                    {footerData.map((item, i) => {
+                        let url;
+                        item.url
+                            ? url = item.url
+                            : url = '#'
+                        return (
+                            <li key={i}><a href={url} target='_blank' rel='noopener'>{item.title}</a></li>
+                        )
+                    })}
+                </ul>
+                <div className='nav-action'>
+                    <div>
+                        <select>
+                            <option>English</option>
+                            <option>Tiếng Việt</option>
+                        </select>
+                        <img src={languageIcon} />
+                        <i><FontAwesomeIcon icon={faCaretDown} /></i>
+                    </div>
+                </div>
+                <div className='netflix-location'>Netflix Vietnam</div>
+            </footer>
         </div>
     );
 }

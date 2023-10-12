@@ -52,7 +52,7 @@
 .boxshot {
     display: flex;
     align-items: center;
-    width: fit-content;
+    min-width: 60%;
     height: 5rem;
     border: 2px solid rgba(128, 128, 128, 0.7);
     border-radius: 10px;
@@ -84,4 +84,35 @@
 
 .boxshot>div:nth-child(3)>img {
     width: 3rem;
+}
+
+@media screen and (max-width:960px) {
+
+    .landing-feature {
+        font-size: 0.7rem;
+    }
+
+    .landing-feature>.container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .landing-feature>.container>div {
+        width: 75%;
+        text-align: center;
+    }
+
+    .boxshot {
+        height: 3.5rem;
+    }
+
+    .boxshot>div:nth-child(3)>img {
+        justify-self: flex-end;
+    }
+
+    .boxshot-text {
+        width: 100%;
+        text-align: left;
+        font-size: 0.8rem;
+    }
 }
