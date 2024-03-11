@@ -116,3 +116,10 @@
         font-size: 0.8rem;
     }
 }
+
+@media screen and (max-width:600px) {
+
+    .landing-feature>.container>div {
+        width: 90%;
+    }
+}

@@ -15,8 +15,8 @@
     flex-direction: row-reverse;
 }
 
-.landing-page>.banner {
-    height: 100dvh;
+.banner {
+    position: relative;
 }
 
 .background {
@@ -47,6 +47,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     height: 90px;
     position: relative;
     z-index: 999;
@@ -107,11 +108,11 @@
 }
 
 .card-text {
-    position: absolute;
     text-align: center;
-    top: 65%;
     width: calc(100% - 20rem);
-    transform: translate(0, -65%);
+    position: relative;
+    z-index: 999;
+    padding: 10rem 0;
 }
 
 .card-text>h1 {
@@ -151,6 +152,8 @@
     font-size: 0.95em;
     transform: translate(0, -50%);
     color: rgb(255, 255, 255, 70%);
+    pointer-events: none;
+    user-select: none;
     transition: .2s ease-in-out;
 }
 
@@ -345,4 +348,12 @@
         width: 100%;
     }
 
+    header>.nav-action select {
+        width: 0;
+        padding: 0.35rem 1.75rem;
+    }
+}
+
+.boxshot>div:nth-of-type(2) {
+    margin-left: auto;
 }
