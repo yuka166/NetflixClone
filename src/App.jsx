@@ -1,9 +1,17 @@
-import LandingPage from "./pages/landing";
+import publicRoutes from "./routes";
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 
 function App() {
   return (
-    <LandingPage />
+    <Routes>
+      {publicRoutes.map((page, id) => {
+        let Page = page.component;
+        return (
+          <Route key={id} path={page.path} element={<Page />} />
+        )
+      })}
+    </Routes>
   );
 }
 
