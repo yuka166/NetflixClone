@@ -8,7 +8,7 @@ function App() {
       {publicRoutes.map((page, id) => {
         let Page = page.component;
         return (
-          <Route key={id} path={page.path} element={<Page />} />
+          <Route key={id} path={"/NetflixClone" + page.path} element={<Page />} />
         )
       })}
     </Routes>

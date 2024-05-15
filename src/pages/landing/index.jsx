@@ -50,7 +50,7 @@ function LandingPage() {
                             <img src={languageIcon} />
                             <i><FontAwesomeIcon icon={faCaretDown} /></i>
                         </div>
-                        <Link to='/login'>Sign In</Link>
+                        <Link to='/NetflixClone/login'>Sign In</Link>
                     </div>
                 </header>
                 <div className='card-text container'>
