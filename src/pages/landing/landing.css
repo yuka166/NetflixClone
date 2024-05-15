@@ -65,15 +65,19 @@
     display: flex;
 }
 
-.landing-page-nav>.nav-action>button {
-    background: rgb(229, 9, 20);
+.landing-page-nav>.nav-action>a {
+    background: var(--red-color);
     color: white;
     outline: none;
     border: 0;
     padding: 0.35rem 1rem;
     border-radius: 5px;
-    font-weight: bold;
+    font-weight: 600;
     margin-left: 1.25rem;
+    text-decoration: none;
+    font-size: 0.8em;
+    display: flex;
+    align-items: center;
 }
 
 .nav-action select {
@@ -120,20 +124,21 @@
     margin: 10px 0;
 }
 
-.card-text>h3:nth-of-type(1) {
-    font-size: 1.5em;
+.card-text>h2 {
+    font-weight: 400;
+    font-size: 1.4em;
 }
 
-.card-text>h3:nth-of-type(2) {
-    font-size: 1.3em;
+.card-text>h3 {
+    font-size: 1.1em;
 }
 
-.landing-email-input-field {
+.input-field {
     width: 25rem;
     position: relative;
 }
 
-.landing-email-input-field input {
+.input-field input {
     background-color: rgba(15, 15, 15, 0.75);
     border: 1px solid rgba(128, 128, 128, 0.7);
     border-radius: 5px;
@@ -142,10 +147,11 @@
     color: white;
     font-size: 0.9em;
     padding: 1.5rem 1rem 0.5rem;
-    width: calc(100% - 30px);
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.landing-email-input-field input+label {
+.input-field input+label {
     position: absolute;
     top: 50%;
     left: 15px;
@@ -157,10 +163,9 @@
     transition: .2s ease-in-out;
 }
 
-.landing-email-input-field input:focus+label,
-.landing-email-input-field input:valid+label {
-    top: 20%;
-    transform: translate(0, -20%);
+.input-field input:focus+label,
+.input-field input:valid+label {
+    top: 1rem;
     font-size: 0.75em;
 }
 
@@ -172,7 +177,7 @@
 .get-started>button {
     padding: 0 1.5rem;
     border-radius: 5px;
-    background: rgb(229, 9, 20);
+    background: var(--red-color);
     color: white;
     border: 0;
     outline: none;
@@ -215,12 +220,12 @@
 }
 
 .landing-question>.container>.question-card>.landing-question-title:hover {
-    background-color: rgb(65, 65, 65);
+    background-color: var(--light-grey-color);
 }
 
 .landing-question>.container>.question-card>div,
 .landing-question>.container>.question-card .landing-question-title {
-    background-color: rgb(45, 45, 45);
+    background-color: var(--grey-color);
 }
 
 .landing-question>.container>.question-card>.landing-question-title>button {
@@ -254,35 +259,35 @@
     transform: rotate(45deg);
 }
 
-.landing-page>footer {
+footer {
     color: rgba(255, 255, 255, 0.7);
     padding: 4rem 0;
     font-size: 0.85rem;
     font-weight: 400;
 }
 
-.landing-page>footer a {
+footer a {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.landing-page>footer>h3 {
+footer>h3 {
     margin: 0;
 }
 
-.landing-page>footer>ul {
+footer>ul {
     display: flex;
     flex-wrap: wrap;
     padding: 0;
     margin: 1rem 0;
 }
 
-.landing-page>footer>ul>li {
+footer>ul>li {
     list-style: none;
     width: 25%;
     margin: 0.5rem 0;
 }
 
-.landing-page>footer>.netflix-location {
+footer>.netflix-location {
     font-size: 0.85rem;
     margin-top: 1rem;
 }
@@ -295,13 +300,13 @@
 
 @media screen and (max-width:960px) {
 
-    .landing-email-input-field input+label,
-    .landing-email-input-field input {
+    .input-field input+label,
+    .input-field input {
         font-size: 1rem;
     }
 
-    .landing-email-input-field input:focus+label,
-    .landing-email-input-field input:valid+label {
+    .input-field input:focus+label,
+    .input-field input:valid+label {
 
         font-size: 1em;
     }
@@ -324,7 +329,7 @@
         font-size: 1rem;
     }
 
-    .landing-page>footer>ul>li {
+    footer>ul>li {
         width: 50%;
     }
 }
@@ -344,7 +349,7 @@
         margin-top: 1rem;
     }
 
-    .landing-email-input-field {
+    .input-field {
         width: 100%;
     }
 

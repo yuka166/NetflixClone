@@ -29,6 +29,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --red-color: rgb(229, 9, 20);
+  --grey-color: rgb(45, 45, 45);
+  --light-grey-color: rgb(65, 65, 65);
+  --transparent-grey-color: rgb(100, 100, 100, .5);
+  --blur-white-color: rgba(255, 255, 255, 0.7);
 }
 
 body {

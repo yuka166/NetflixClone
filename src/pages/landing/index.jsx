@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 import background from '../../assets/images/background.jpg';
 import logo from '../../assets/icons/logo.svg';
 import languageIcon from '../../assets/icons/language.svg';
@@ -49,15 +50,15 @@ function LandingPage() {
                             <img src={languageIcon} />
                             <i><FontAwesomeIcon icon={faCaretDown} /></i>
                         </div>
-                        <button>Sign In</button>
+                        <Link to='/login'>Sign In</Link>
                     </div>
                 </header>
                 <div className='card-text container'>
                     <h1>Laughter. Tears. Thrills. Find it all on Netflix.</h1>
-                    <h3>Join today. Cancel anytime.</h3>
+                    <h2>Join today. Cancel anytime.</h2>
                     <h3>Ready to watch? Enter your email to create or restart your membership.</h3>
                     <div className='get-started'>
-                        <div className='landing-email-input-field'>
+                        <div className='input-field'>
                             <input type='text' required />
                             <label>Email address</label>
                         </div>
@@ -134,7 +135,7 @@ function LandingPage() {
                     </div>
                     <h3>Ready to watch? Enter your email to create or restart your membership.</h3>
                     <div className='get-started'>
-                        <div className='landing-email-input-field'>
+                        <div className='input-field'>
                             <input type='text' required />
                             <label>Email address</label>
                         </div>
